@@ -1,0 +1,105 @@
+/**index.wxss**/
+.ccc{
+  font-size: 12px;
+  color: #434343;
+}
+.container .prodcut{
+  width: 100%;
+  height: 92vh;
+  justify-content: space-between;
+}
+.prodcut .sidebar{
+  width: 25%;
+  height: 92vh;
+  background-color:#ccc;
+}
+ .sidebar .tapnav{
+   display: block;
+   width: 100%;
+   text-align: center;
+   padding: 0.75rem 0.3rem;
+    font-size: 32rpx; 
+   background: #ccc;
+   color: #fff;
+   border-bottom: 1px solid #fff;
+ }
+ .tapnav.active{
+   background-color:pink;
+ }
+.prodcut .content{
+  width: 70%;
+  height: 92vh;
+  padding-left:12rpx; 
+}
+.content .items{
+  position: relative;
+  width: 100%; 
+  height: 160rpx;
+  justify-content: flex-start;
+  padding: 10rpx 0;
+  font-size:30rpx;
+  background: #fff;
+  border-bottom: 1px solid #222;
+  font-weight: bold;
+}
+.items .food-pic{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+  border-radius: 2px;
+}
+.items .food-dec{
+  width: 250rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.items .food-buy{
+  align-items: center;
+  justify-content: space-between;
+  width: 140rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: 10rpx;
+  right: 20rpx;
+}
+.food-buy .sectled{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: lightblue;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2px;
+}
+.container .checkstand{
+  width: 100%;
+  height: 8vh;
+  background-color: black;
+  position: relative;
+}
+ .checkstand .shopping{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4px solid black;
+  position: absolute;
+  top:-55rpx;
+  left: 30rpx;
+}
+ .checkstand .boll{
+ position: absolute;
+  left: 230rpx;
+  font-size: 40rpx;
+  color: orange;
+  line-height: 96rpx;
+  padding-bottom:10rpx; 
+}
+ .checkstand .total{
+  height: 8vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300rpx;
+  background-color: green;
+}

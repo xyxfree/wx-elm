@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container flex-wrap flex-direction-col">
+  <view class='prodcut flex-wrap flex-direction-row'>
+    <scroll-view scroll-Y class='sidebar flex-wrap flex-direction-col'>
+       <text wx:for="{{dataList}}" wx:key="{{index}}" class="tapnav  {{curnev === index?'active':''}}" data-index="{{index}}" bindtap='select'>{{item.name}}</text>
+    </scroll-view>
+    <scroll-view scroll-Y class='content flex-wrap flex-direction-col'>
+       <view class='items flex-wrap flex-direction-row' wx:for="{{dataList[curnev].foods}}"  wx:key="{{dataList[curnev].foods.index}}">
+          <image class="food-pic" src="{{item.icon}}"></image>
+       <view class='food-title flex-wrap flex-direction-col'>
+          <text class='food-name'>{{item.name}}</text>
+          <text class='food-dec ccc' wx:if="{{item.description}}">{{item.description}}</text>
+           <text class='food-dec ccc' wx:else="{{item.description}}">家常菜</text>
+          <text class='food-rating ccc'>月销量{{item.sellCount}}份  好评率{{item.rating}}%</text>
+          <text class='food-price'>¥{{item.price}}</text>
+       </view>
+       <view class='food-buy  flex-wrap flex-direction-row'>
+          <view class='sectled' bindtap='cursub' data-index="{{index}}">-</view>
+          <text class='num'>{{item.num}}</text>
+          <view class='sectled' bindtap='curadd' data-index="{{index}}">+</view>
+       </view>
+       </view>
+    </scroll-view>
+  </view>
+  <view class='checkstand flex-wrap flex-direction-row'>
+     <image src="../../images/shopping.jpg" class='shopping'></image>
+     <text class='boll'>¥{{total}}元</text>
+     <button class='total' default bindtap='total'>去结算</button>
+  </view>
+</view>
